@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نديم │ الملف الشخصي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/mybelovedleafy.css">
+</head>
+<body>
+
+    <div class="app">
+        
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <img src="../assets/logo.jpeg" alt="شعار نديم">
+                </div>
+                <div class="logo-text">
+                    <h1>نديم</h1>
+                    <p>مساعدك الصوتي الذكي</p>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index.html'">الرئيسية</button>
+            </div>
+        </header>
+
+        <main class="main-profile">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <img id="profileAvatar" src="../assets/bb.jpeg" alt="الصورة الشخصية">
+                        <label for="avatarUpload" class="upload-btn">📷</label>
+                        <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                    </div>
+                    <h2 id="displayName">مستخدم نديم</h2>
+                    <p id="displayEmail">user@nadim.com</p>
+                </div>
+
+                <hr class="divider">
+
+                <form id="profileForm" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل</label>
+                        <input type="text" id="fullName" value="أبو فهد" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" value="Ibra&1245@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" value="+966 50 123 457">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="voicePreference">نبرة صوت المساعد المفضلة</label>
+                        <select id="voicePreference">
+                            <option value="warm">صوت دافئ ومريح</option>
+                            <option value="energetic">صوت حيوي ونشيط</option>
+                            <option value="calm">صوت هادئ ورزين</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn" id="saveBtn" onclick="window.location.href='index.html'">حفظ التغييرات</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="profile.js"></script>
+    <script src="../js/mybelovedleafy.js"></script>
+</body>
+</html>

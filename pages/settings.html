@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نديم │ الإعدادات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+
+    <div class="app">
+        
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <img src="../assets/logo.jpeg" alt="شعار نديم">
+                </div>
+                <div class="logo-text">
+                    <h1>نديم</h1>
+                    <p>مساعدك الصوتي الذكي</p>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index.html'">الرئيسية</button>
+            </div>
+        </header>
+
+        <main class="main-settings">
+            <div class="settings-card">
+                <div class="settings-header">
+                    <h2>إعدادات النظام</h2>
+                    <p>تخصيص تجربة التحدث والتعامل مع نديم</p>
+                </div>
+
+                <hr class="divider">
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>الوضع الليلي (Dark Mode)</h3>
+                        <p>تغيير ألوان واجهة نديم لتكون مريحة للعين في الظلام</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>الاستجابة الصوتية التلقائية</h3>
+                        <p>تفعيل قراءة إجابات نديم بصوت مسموع فوراً</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="voiceResponse">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>لغة المساعد</h3>
+                        <p>اختيار لغة واجهة المساعد والردود</p>
+                </div>
+
+                <div class="setting-control">
+                     <select id="language">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>الإشعارات</h3>
+                        <p>إظهار التنبيهات داخل التطبيق</p>
+                    </div>
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="notifications">
+                        <span class="slider"></span>
+                    </label>
+            </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>تكبير خط النصوص</h3>
+                        <p>تسهيل قراءة نصوص المحادثات</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="largeText">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button class="save-btn" id="saveSettingsBtn">حفظ الإعدادات وتطبيقها</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="../js/settings.js"></script>
+</body>
+</html>
