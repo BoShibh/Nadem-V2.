@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+    --primary: #27153D;
+    --primary-light: #3A235A;
+    --primary-dark: #1A0F29;
+    --secondary: #F6B6B7;
+    --secondary-hover: #f8c6c7;
+    --background: #ECDFEE;
+    --surface: #FFFFFF;
+    --text: #20152F;
+    --text-light: #6F6480;
+    --success: #4CAF50;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --border: #E5DDEC;
+
+    --radius-xs: 8px;
+    --radius-sm: 14px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow-sm: 0 6px 16px rgba(0,0,0,.08);
+    --shadow-md: 0 14px 35px rgba(10, 2, 20, 0.12);
+    --shadow-lg: 0 24px 60px rgba(39,21,61,.18);
+
+    --transition: .25s ease;
+}
+
+body.dark-mode {
+    --bg-color: #12091c;
+    --card-bg: #1e122b;
+    --text-dark: #f3eff6;
+    --text-muted: #b8b2c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--surface);
+}
+
+.welcome-side {
+    flex: 1.2;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+.welcome-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+.welcome-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(26, 15, 41, 0.95) 20%, rgba(39, 21, 61, 0.4) 100%);
+    z-index: 2;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: right;
+    max-width: 620px;
+    animation: slideInUp 0.8s ease;
+}
+
+.welcome-quote {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.welcome-author {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.welcome-author-title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 4px;
+}
+
+.login-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--surface);
+    overflow-y: auto;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.8s ease;
+}
+
+.login-header {
+    margin-bottom: 35px;
+    text-align: right;
+}
+
+.login-logo-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.login-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-box h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.login-box p.subtitle {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.form-group {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 15px;
+    background-color: #F7F4FB;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    color: var(--text);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-light);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 4px rgba(58, 35, 90, 0.08);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px 22px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    background: var(--primary-light);
+    box-shadow: var(--shadow-md);
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+    min-height: 20px;
+    display: none;
+    background-color: #FFF8F8;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border-right: 5px solid var(--danger);
+    text-align: right;
+}
+
+.login-footer {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .app-login {
+        flex-direction: column;
+    }
+    .welcome-side {
+        display: none;
+    }
+    .login-side {
+        padding: 30px;
+    }
+}

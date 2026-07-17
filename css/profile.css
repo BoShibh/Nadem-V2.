@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+    --primary: #27153D;
+    --primary-light: #3A235A;
+    --primary-dark: #1A0F29;
+    --secondary: #F6B6B7;
+    --secondary-hover: #f8c6c7;
+    --background: #ECDFEE;
+    --surface: #FFFFFF;
+    --text: #20152F;
+    --text-light: #6F6480;
+    --success: #4CAF50;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --border: #E5DDEC;
+
+    --radius-xs: 8px;
+    --radius-sm: 14px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow-md: 0 14px 35px rgba(39,21,61,.12);
+    --transition: .25s ease;
+}
+
+ر
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #EFE6F2, #DDD0E4);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    direction: rtl;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--secondary) 0%, #f8c6c7 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.header button {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    height: 42px;
+}
+
+.header button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.main-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    direction: rtl;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--background);
+}
+
+.upload-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+
+.upload-btn:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.1);
+}
+
+.profile-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.profile-header p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 30px 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    color: var(--text);
+    background-color: #FAF9FE;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-light);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 3px rgba(58, 35, 90, 0.08);
+}
+
+.form-actions {
+    margin-top: 30px;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.save-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.save-btn:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,18 @@
+body.large-text{
+    font-size:18px;
+}
+
+body.large-text h1{
+    font-size:2.2rem;
+}
+
+body.large-text h2{
+    font-size:1.6rem;
+}
+
+body.large-text p,
+body.large-text button,
+body.large-text input,
+body.large-text select{
+    font-size:1.1rem;
+}
