@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نديم │ الخريطة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/map.css">
+</head>
+<body>
+
+    <div class="app">
+        
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <img src="../assets/logo.jpeg" alt="شعار نديم">
+                </div>
+                <div class="logo-text">
+                    <h1>نديم</h1>
+                    <p>مساعدك الصوتي والذكي</p>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index.html'">الرئيسية</button>
+            </div>
+        </header>
+
+        <main class="main-map-layout">
+            
+            <section class="chat-sidebar">
+                <div class="sidebar-header">
+                    <h2>المساعد الذكي للأماكن</h2>
+                    <p>اكتب ما تبحث عنه وسأجد لك الخيار الأفضل</p>
+                </div>
+                
+                <div class="chat-history" id="chatHistory">
+                    <div class="ai-message">
+                        <h3>نديم</h3>
+                        <p>أهلاً بك! اكتب لي ما تريد البحث عنه (مثال: "أبي أرخص سوبرماركت قريب" أو "أفضل ورشة سيارات") وسأقوم بتحليل طلبك وتحديد الموقع الأنسب على الخريطة.</p>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <textarea id="userInput" placeholder="اكتب طلبك هنا للتحليل..." rows="2"></textarea>
+                    <button id="sendBtn">إرسال</button>
+                </div>
+            </section>
+
+            <section class="map-container">
+                <div id="map"></div>
+                <div class="map-overlay-info" id="recommendationCard" style="display: none;">
+                    <div class="place-header">
+                        <span class="tag best-badge">الأفضل لك</span>
+                        <h4 id="placeName">اسم المكان المغري</h4>
+                    </div>
+                    <p id="placeDetails">تحليل المكان والأسعار هنا...</p>
+                    <div class="place-meta">
+                        <span id="placePrice">💰 اقتصادي</span>
+                        <span id="placeDistance">📍 1.2 كم</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+<script type="module" src="../js/map.js"></script></body>
+</html>

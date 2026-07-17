@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نديم │ تسجيل الدخول</title>
+    <link href="https://fonts.googleapis.com/css2?amily=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/mybelovedleafy.css">
+
+</head>
+<body>
+
+    <div class="app-login">
+        
+        <div class="welcome-side">
+            <img src="../assets/aaa.jpeg" alt="ترحيب نديم" class="welcome-bg-image">
+            
+            <div class="welcome-content">
+                <p class="welcome-quote">"أهلاً بك في عالم نديم، المساعد الصوتي الذكي المصمم لتسهيل يومك وتلبية احتياجاتك بكل بساطة وسرعة."</p>
+                <p class="welcome-author">نديم</p>
+                <p class="welcome-author-title">مساعدك الصوتي الشخصي</p>
+            </div>
+        </div>
+
+        <div class="login-side">
+            <div class="login-box">
+                
+                <div class="login-header" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                    <div class="logo-small" style="width: 75px; height: 75px; border-radius: 20px; overflow: hidden;">
+                        <img src="../assets/logo.jpeg" alt="شعار نديم" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <div style="text-align: right; width: 100%;">
+                        <h2 style="margin: 0 0 8px 0;">دعنا نبدأ المحادثة</h2>
+                        <p class="subtitle" style="margin: 0; color: var(--text-light); font-size: 14px;">سجل دخولك لتتمكن من التحدث مع نديم والحصول على أفضل البدائل والعروض.</p>
+                    </div>
+                </div>
+
+                <form id="loginForm" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="username">اسم المستخدم</label>
+                        <input type="text" id="username" placeholder="أدخل اسم المستخدم" required autocomplete="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <input type="password" id="password" placeholder="أدخل كلمة المرور" required autocomplete="current-password">
+                    </div>
+
+                    <div id="errorMessage" class="error-message"></div>
+
+                    <button type="submit" class="login-btn" id="loginSubmitBtn" onclick="window.location.href='index.html'">متابعة</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>هل تحتاج إلى مساعدة؟ تواصل مع الدعم الفني لنديم.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../js/mybelovedleafy.js"></script>
+</body>
+</html>
