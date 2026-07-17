@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نديم │ الاساسية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mybelovedleafy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div class="logo-section" style="display: flex; align-items: center; gap: 12px; direction: rtl;">
+                <div class="logo-icon" style="width: 45px; height: 45px; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #ECDFEE; flex-shrink: 0;">
+                    <img src="../assets/logo.jpeg" alt="نديم" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <div class="logo-text" style="text-align: right;">
+                    <h1 style="font-size: 20px; font-weight: 800; color: #27153D; margin: 0; line-height: 1.2;">نديم</h1>
+                    <p style="font-size: 11px; color: #6F6480; margin: 0;">المساعد الصوتي الذكي</p>
+                </div>
+            </div>
+
+            <div class="header-buttons">
+                <button id="mapPageBtn" onclick="window.location.href='pages/map.html'">🗺 الخريطة</button>
+                <button id="settingsPageBtn" onclick="window.location.href='pages/settings.html'">🛠 الإعدادات</button>
+                <button id="loginPageBtn" onclick="window.location.href='pages/selectprofile.html'">𐀪 الملف الشخصي</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="card left-panel">
+                <div class="panel-header">
+                    <span class="sparkle-icon">✦</span>
+                    <h2>نص المحادثة</h2>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="user-message">
+                        <h3>أنت</h3>
+                        <p id="usertext">بانتظار كلامك المسموع...</p>
+                    </div>
+
+                    <div class="ai-message">
+                        <h3>نديم</h3>
+                        <p id="aitext">أهلاً بك! اضغط على المايك وتحدث معي، أنا هنا لمساعدتك.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card center-panel">
+                <div class="mic-wrapper">
+                    <button id="micButton">🎤︎︎</button>
+                </div>
+
+                <div class="assistant-status">
+                    <h2 class="ai-title">المساعد الذكي</h2>
+                    <p id="status" class="ai-status">بانتظارك...</p>
+                </div>
+
+                <div class="waveform">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+            </div>
+
+            <div class="card right-panel">
+                <div class="panel-header">
+                    <span class="sparkle-icon">⚙</span>
+                    <h2>لوحة التحكم والمزايا</h2>
+                </div>
+
+                <div class="ai-buttons">
+                    <button id="repeatBtn">🗣 إعادة القراءة</button>
+                    <button id="offersBtn">★ العروض المتوفرة</button>
+                    <button id="alternativeBtn">🗓 بدائل الأدوية</button>
+                    <button id="clearBtn">🗳 مسح المحادثة</button>
+                </div>
+
+                <div class="tip-card" style="background-color: #FFFbeb; border-radius: 20px; padding: 16px 20px; display: flex; align-items: center; gap: 12px; border: 1px solid #FEF3C7; margin-top: auto;">
+                    <span style="font-size: 24px;">💡</span>
+                    <p style="font-size: 13px; color: #B45309; font-weight: 500; line-height: 1.5; margin: 0;">يمكنك الضغط على زر المايك للتحدث معي في أي وقت وسأقوم بالرد عليك وقراءته صوتياً!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../js/script.js"></script>
+    <script src="../js/mybelovedleafy.js"></script>
+</body>
+</html>
